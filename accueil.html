@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="actu.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +228 90 74 35 73 / 99 44 98 58</span>
+                    <span><i class="fas fa-envelope"></i></span>
+                </div>
+                <div class="auth-links">
+                    <a href="#"><i class="fas fa-user"></i><h2>Mon Compte</h></a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="interface.html">PC<span>Home</span></a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <a href="exercice.html" class="active"><i class="fas fa-home"></i> Accueil</a>
+                    <li class="dropdown">
+                        <a href="#">Ordinateurs <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="">PC Portable</a>
+                            <a href="#">PC Bureau</a>
+                            <img src="" alt="image/iph.jpg"><a href="image/iph.jpg">PC Gamer</a>
+                            <a href="#">Workstations</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Composants</a></li>
+                    <li><a href="#">Périphériques</a></li>
+                    <li><a href="#">Promotions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Bannière principale -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Les meilleurs ordinateurs au meilleur prix</h1>
+                <p>Découvrez notre sélection de PC gamer, ordinateurs portables et accessoires</p>
+                <a href="#featured" class="btn">Découvrir</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catégories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Nos Catégories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://via.placeholder.com/300x200" alt="PC Portable">
+                    <h3>PC Portable</h3>
+                    <a href="#" class="btn-small">Voir plus</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://via.placeholder.com/300x200" alt="PC Bureau">
+                    <h3>PC Bureau</h3>
+                    <a href="#" class="btn-small">Voir plus</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://via.placeholder.com/300x200" alt="PC Gamer">
+                    <h3>PC Gamer</h3>
+                    <a href="#" class="btn-small">Voir plus</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Accessoires">
+                    <h3>Accessoires</h3>
+                    <a href="#" class="btn-small">Voir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produits en vedette -->
+    <section class="featured-products" id="featured">
+        <div class="container">
+            <h2 class="section-title">Produits en Vedette</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">Promo</div>
+                    <img src="https://via.placeholder.com/250x200" alt="PC Gamer">
+                    <h3>PC Gamer Pro X</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(24 avis)</span>
+                    </div>
+                    <div class="price">1 299,99 € <span class="old-price">1 499,99 €</span></div>
+                    <div class="product-actions">
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Ajouter</button>
+                        <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <!-- Plus de produits similaires... -->
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn-outline">Voir tous les produits</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi nous choisir -->
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <h3>Livraison Rapide</h3>
+                <p>Livraison en 24/48h</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-undo"></i>
+                <h3>Retour Facile</h3>
+                <p>30 jours pour changer d'avis</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lock"></i>
+                <h3>Paiement Sécurisé</h3>
+                <p>Paiement 100% sécurisé</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>Support 24/7</h3>
+                <p>Assistance technique</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Restez informé de nos offres</h3>
+                <p>Inscrivez-vous à notre newsletter pour recevoir les dernières promotions</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-col">
+                    <h4>TechZone</h4>
+                    <p>Votre partenaire high-tech pour tous vos besoins en informatique. Des produits de qualité à des prix compétitifs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Nouveautés</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Mon Compte</h4>
+                    <ul>
+                        <li><a href="#">Mon Compte</a></li>
+                        <li><a href="#">Mes Commandes</a></li>
+                        <li><a href="#">Liste de Souhaits</a></li>
+                        <li><a href="#">Suivi de Commande</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Technologie, 75000 Paris</li>
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li><i class="fas fa-envelope"></i> contact@techzone.fr</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 TechZone. Tous droits réservés.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
