@@ -8,71 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>PC Ordinateurs....STOR</h1>
-    <!-- Barre de navigation -->
-    <div class="navbar" id="myNavbar">
-        <a href="accueil.html" class="active"><i class="fas fa-home"></i> Accueil</a>
-        <a href="profil.html">Profil</a>
-        <a href="Actualite/actualités.html"><i class="fas fa-newspaper"></i> Actualités</a>
-        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-        
-        <!-- Menu déroulant -->
-        <div class="dropdown">
-            <button class="dropbtn"><i class="fas fa-caret-down"></i> Plus 
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#"><i class="fas fa-info-circle"></i> À propos</a>
-                <a href="#"><i class="fas fa-cog"></i> Paramètres</a>
-                <a href="#"><i class="fas fa-question-circle"></i> Aide</a>
-            </div>
-        </div>
-        
-        <a href="#" class="icon" onclick="toggleMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
-    <!-- Contenu de la page -->
-    <div style="padding:20px;margin-top:30px;">
-        <h2>Bienvenue sur notre site</h2>
-        <p>Contenu de la page...</p>
-    </div>
-Nous Vous Presentons 
-    <script>
-        // Fonction pour le menu responsive
-        function toggleMenu() {
-            var x = document.getElementById("myNavbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
-
-        // Ajouter une classe active au clic sur un lien
-        const links = document.querySelectorAll('.navbar a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                links.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
-    <p>voici ma presentation sur un exercice html  <br>
-    alors Mr.Adil........</p>
-    
-    <h2>Mes centres d'int</h2>
-    <ul>
-        <li>Intro</li>
-        <li>devoir</li>
-        <li></li>
-    </ul>
-<H2>Site que j'aime</H2>
-    <ol>
-        <li> <a href="https://getbootstrap.com/docs/5.3/components/navbar/#css">Bootstrap.com</a></li>
-        <li><a href="https://chatgpt.com/c/6931407e-79c4-832c-a32f-bbdcf545b868">Chatgpt.com</a></li>
-        <li><a href="https://app.sayna.io/courses">sayna.com</a></li>
-    </ol>
+    <div class="zoom-overlay">
+        <div class="overlay">
+            <h1><b>Bienvenue à PCHome</b></h1>
+			<h2><b>"Combattu n'ai jamais vaincu"<br>
+                ~La Légend vivante~
+            </b></h2><P>
+        <nav>
+            <button><a href="accueil.html"><h1><b><u><font size="5">Accueil</font></u></b></h1></a></button>
+        </nav>
+    </nav>
+</P>
 </body>
 </html>

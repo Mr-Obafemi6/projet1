@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - PCHome</title>
+    <style>
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="compte.css">
+
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +228 90 74 35 73 / 99 44 98 58</span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:gerardtchalla6@gmail.com" style="color: white; text-decoration: none;">gerardtchalla6@gmail.com</a></span>
+                </div>
+                <div class="auth-links">
+        
+                    <a href="../Panier/panier.html"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                </div>
+                <div class="nav-links">
+                    <a href="../accueil.html"><i class="fas fa-home"></i> Accueil</a>
+                    <a href="#">Ordinateurs <i class="fas fa-chevron-down"></i></a>
+                    <a href="#">Composants <i class="fas fa-chevron-down"></i></a>
+                    <a href="#">Périphériques</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="search-cart">
+                    <div class="search-box">
+                        <input type="text" placeholder="Rechercher...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="account-container">
+        <div class="container">
+            <!-- Onglets -->
+            <div class="account-tabs">
+                <button class="tab-btn active" data-tab="login">Connexion</button>
+                <button class="tab-btn" data-tab="register">Créer un compte</button>
+                <button class="tab-btn" data-tab="dashboard" style="display: none;">Tableau de bord</button>
+            </div>
+
+            <!-- Formulaire de connexion -->
+            <div id="login" class="tab-content active">
+                <h2>Connexion à votre compte</h2>
+                <p>Bienvenue ! Connectez-vous pour accéder à votre espace personnel.</p>
+                
+                <form id="loginForm" class="account-form">
+                    <div class="form-group">
+                        <label for="login-email">Adresse email</label>
+                        <input type="email" id="login-email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">Mot de passe</label>
+                        <input type="password" id="login-password" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group form-check">
+                        <input type="checkbox" id="remember-me" class="form-check-input">
+                        <label for="remember-me" class="form-check-label">Se souvenir de moi</label>
+                        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                    
+                    <div class="social-login">
+                        <p>Ou connectez-vous avec</p>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn btn-google"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-btn btn-facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-btn btn-twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Formulaire d'inscription -->
+            <div id="register" class="tab-content">
+                <h2>Créer un compte</h2>
+                <p>Créez un compte pour bénéficier d'une expérience personnalisée.</p>
+                
+                <form id="registerForm" class="account-form">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="first-name">Prénom</label>
+                            <input type="text" id="first-name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            <label for="last-name">Nom</label>
+                            <input type="text" id="last-name" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-email">Adresse email</label>
+                        <input type="email" id="register-email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-password">Mot de passe</label>
+                        <input type="password" id="register-password" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmer le mot de passe</label>
+                        <input type="password" id="confirm-password" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group form-check">
+                        <input type="checkbox" id="terms" class="form-check-input" required>
+                        <label for="terms" class="form-check-label">J'accepte les <a href="#">conditions d'utilisation</a> et la <a href="#">politique de confidentialité</a></label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                </form>
+            </div>
+
+            <!-- Tableau de bord utilisateur (caché par défaut) -->
+            <div id="dashboard" class="tab-content">
+                <div class="dashboard">
+                    <!-- Barre latérale -->
+                    <aside class="sidebar">
+                        <div class="user-profile">
+                            <img src="https://via.placeholder.com/80" alt="Photo de profil" class="user-avatar">
+                            <h3 class="user-name">John Doe</h3>
+                            <p class="user-email">john.doe@example.com</p>
+                        </div>
+                        
+                        <ul class="nav-menu">
+                            <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                            <li><a href="#"><i class="fas fa-shopping-bag"></i> Mes commandes</a></li>
+                            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Adresses</a></li>
+                            <li><a href="#"><i class="fas fa-user-edit"></i> Détails du compte</a></li>
+                            <li><a href="#"><i class="fas fa-lock"></i> Changer de mot de passe</a></li>
+                            <li><a href="#"><i class="fas fa-heart"></i> Liste de souhaits</a></li>
+                            <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                        </ul>
+                    </aside>
+                    
+                    <!-- Contenu principal -->
+                    <div class="dashboard-content">
+                        <h2 class="section-title">Tableau de bord</h2>
+                        
+                        <div class="welcome-message">
+                            <h2>Bienvenue, John !</h2>
+                            <p>Depuis le tableau de bord de votre compte, vous pouvez facilement consulter vos commandes récentes, gérer vos adresses de livraison et de facturation, et modifier votre mot de passe et les détails de votre compte.</p>
+                            <a href="#" class="btn">Voir mes commandes</a>
+                        </div>
+                        
+                        <div class="dashboard-stats">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="stat-card">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <h3>Commandes</h3>
+                                        <p>5 commandes</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-card">
+                                        <i class="fas fa-heart"></i>
+                                        <h3>Liste de souhaits</h3>
+                                        <p>12 articles</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-card">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h3>Adresses</h2>
+                                        <p>2 adresses enregistrées</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-orders">
+                            <h3>Commandes récentes</h3>
+                            <p>Vous n'avez pas encore passé de commande.</p>
+                            <a href="#" class="btn">Faire des achats</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>À propos de nous</h3>
+                    <p>PC Home est votre destination de confiance pour tous vos besoins en informatique et nouvelles technologies.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Nouveautés</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Ordinateurs portables</a></li>
+                        <li><a href="#">Ordinateurs de bureau</a></li>
+                        <li><a href="#">Composants PC</a></li>
+                        <li><a href="#">Périphériques</a></li>
+                        <li><a href="#">Accessoires</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contactez-nous</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue de l'Informatique, Lomé, Togo</li>
+                        <li><i class="fas fa-phone"></i> +228 90 74 35 73</li>
+                        <li><i class="fas fa-envelope"></i> contact@pchome.tg</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PC Home. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion des onglets
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Retirer la classe active de tous les boutons et contenus
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Ajouter la classe active au bouton cliqué
+                btn.classList.add('active');
+                
+                // Afficher le contenu correspondant
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Simulation de connexion (à remplacer par une vraie logique d'authentification)
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Ici, vous ajouteriez la logique de connexion réelle
+                showDashboard();
+            });
+        }
+        
+        if (registerForm) {
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Ici, vous ajouteriez la logique d'inscription réelle
+                alert('Compte créé avec succès ! Vous pouvez maintenant vous connecter.');
+                document.querySelector('[data-tab="login"]').click();
+            });
+        }
+        
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Ici, vous ajouteriez la logique de déconnexion réelle
+                document.querySelector('[data-tab="login"]').click();
+                alert('Vous avez été déconnecté avec succès.');
+            });
+        }
+        
+        function showDashboard() {
+            // Cacher les onglets de connexion/inscription
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                if (btn.getAttribute('data-tab') !== 'dashboard') {
+                    btn.style.display = 'none';
+                } else {
+                    btn.style.display = 'block';
+                }
+            });
+            
+            // Afficher le tableau de bord
+            document.querySelector('[data-tab="dashboard"]').click();
+        }
+        
+        // Pour la démo, vous pouvez décommenter cette ligne pour afficher directement le tableau de bord
+        // showDashboard();
+    </script>
+</body>
+</html>

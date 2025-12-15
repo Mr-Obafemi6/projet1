@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/portable.css">
+    <style>
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>PC Portables - FuturTech</title>
+    <!-- Ajoutez cette ligne dans la section <head> de votre fichier PCportable.html -->
+<script src="../assets/js/cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Nos PC Portables</h1>
+            <nav style="display: flex; gap: 15px; align-items: center;">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <i class="fas fa-moon"></i>
+                    <span>Mode Nuit</span>
+                </button>
+                <a href="../accueil.html" class="btn" style="background-color: #2563eb; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center;">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Retour à l'accueil
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters">
+            <h2>Filtrer par :</h2>
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="bureautique">Bureautique</option>
+                    <option value="ultrabook">Ultrabook</option>
+                    <option value="workstation">Workstation</option>
+                </select>
+                <select id="price-filter">
+                    <option value="all">Tous les prix</option>
+                    <option value="0-500">Moins de 500€</option>
+                    <option value="500-1000">500€ - 1000€</option>
+                    <option value="1000-1500">1000€ - 1500€</option>
+                    <option value="1500">Plus de 1500€</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <!-- PC Gamer 1 -->
+            <div class="product-card" data-category="gaming" data-price="1499">
+                <div class="product-badge">Gaming</div>
+                <img src="https://images.unsplash.com/photo-1593642702821-8bceb7c06691?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="PC Gamer Pro">
+                <div class="product-info">
+                    <h3>Gamer Pro X1</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> Intel i7-11800H</p>
+                        <p><i class="fas fa-memory"></i> 16 Go RAM DDR4</p>
+                        <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+                        <p><i class="fas fa-tv"></i> 15.6" FHD 144Hz</p>
+                        <p><i class="fas fa-gamepad"></i> RTX 3060 6Go</p>
+                    </div>
+                    <div class="price">982 095 FCFA</div>
+                    <button class="add-to-cart" data-product="Gamer Pro X1" data-price="1499">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+
+            <!-- PC Bureautique -->
+            <div class="product-card" data-category="bureautique" data-price="799">
+                <div class="product-badge">Bureautique</div>
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="PC Bureautique">
+                <div class="product-info">
+                    <h3>Office Pro 15</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> Intel i5-1135G7</p>
+                        <p><i class="fas fa-memory"></i> 8 Go RAM DDR4</p>
+                        <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+                        <p><i class="fas fa-tv"></i> 15.6" FHD IPS</p>
+                        <p><i class="fas fa-battery-full"></i> Jusqu'à 10h</p>
+                    </div>
+                    <div class="price">523 345 FCFA</div>
+                    <button class="add-to-cart" data-product="Office Pro 15" data-price="799">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ultrabook -->
+            <div class="product-card" data-category="ultrabook" data-price="1299">
+                <div class="product-badge">Ultrabook</div>
+                <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ultrabook Elite">
+                <div class="product-info">
+                    <h3>Ultrabook Elite</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> Intel i7-1165G7</p>
+                        <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</p>
+                        <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+                        <p><i class="fas fa-tv"></i> 14" 4K Touch</p>
+                        <p><i class="fas fa-weight"></i> 1.2 kg</p>
+                    </div>
+                    <div class="price">850 845 FCFA</div>
+                    <button class="add-to-cart" data-product="Ultrabook Elite" data-price="1299">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+
+            <!-- Workstation -->
+            <div class="product-card" data-category="workstation" data-price="2499">
+                <div class="product-badge">Workstation</div>
+                <img src="https://images.unsplash.com/photo-1587202372775-e229c75269d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Workstation Pro">
+                <div class="product-info">
+                    <h3>Workstation Pro 17</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> Intel Xeon W-11955M</p>
+                        <p><i class="fas fa-memory"></i> 32 Go ECC RAM</p>
+                        <p><i class="fas fa-hdd"></i> 2 To SSD + 2 To HDD</p>
+                        <p><i class="fas fa-tv"></i> 17.3" 4K HDR</p>
+                        <p><i class="fas fa-cubes"></i> RTX A5000 16Go</p>
+                    </div>
+                    <div class="price">1 636 845 FCFA</div>
+                    <button class="add-to-cart" data-product="Workstation Pro 17" data-price="2499">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+            <!-- PC Gamer 2 -->
+            <div class="product-card" data-category="gaming" data-price="1799">
+                <div class="product-badge">Gaming</div>
+                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6701?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Gaming Beast X2">
+                <div class="product-info">
+                    <h3>Gaming Beast X2</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> AMD Ryzen 9 5900HX</p>
+                        <p><i class="fas fa-memory"></i> 32 Go RAM DDR4</p>
+                        <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+                        <p><i class="fas fa-tv"></i> 17.3" QHD 165Hz</p>
+                        <p><i class="fas fa-gamepad"></i> RTX 3070 8Go</p>
+                    </div>
+                    <div class="price">1 178 845 FCFA</div>
+                    <button class="add-to-cart" data-product="Gaming Beast X2" data-price="1799">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+
+            <!-- PC Bureautique 2 -->
+            <div class="product-card" data-category="bureautique" data-price="649">
+                <div class="product-badge">Bureautique</div>
+                <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Office Slim 14">
+                <div class="product-info">
+                    <h3>Office Slim 14</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> Intel i5-1135G7</p>
+                        <p><i class="fas fa-memory"></i> 8 Go RAM DDR4</p>
+                        <p><i class="fas fa-hdd"></i> 256 Go SSD</p>
+                        <p><i class="fas fa-tv"></i> 14" FHD IPS</p>
+                        <p><i class="fas fa-battery-full"></i> Jusqu'à 12h</p>
+                    </div>
+                    <div class="price">425 095 FCFA</div>
+                    <button class="add-to-cart" data-product="Office Slim 14" data-price="649">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ultrabook 2 -->
+            <div class="product-card" data-category="ultrabook" data-price="1599">
+                <div class="product-badge">Ultrabook</div>
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ultrabook Pro X">
+                <div class="product-info">
+                    <h3>Ultrabook Pro X</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+                        <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR5</p>
+                        <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+                        <p><i class="fas fa-tv"></i> 13.5" 3K Touch</p>
+                        <p><i class="fas fa-weight"></i> 1.1 kg</p>
+                    </div>
+                    <div class="price">1 047 345 FCFA</div>
+                    <button class="add-to-cart" data-product="Ultrabook Pro X" data-price="1599">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+
+            <!-- Workstation 2 -->
+            <div class="product-card" data-category="workstation" data-price="3299">
+                <div class="product-badge">Workstation</div>
+                <img src="https://images.unsplash.com/photo-1587202372775-e229c75269d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Workstation Elite">
+                <div class="product-info">
+                    <h3>Workstation Elite</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> AMD Ryzen Threadripper Pro</p>
+                        <p><i class="fas fa-memory"></i> 64 Go ECC RAM</p>
+                        <p><i class="fas fa-hdd"></i> 2 To NVMe + 4 To HDD</p>
+                        <p><i class="fas fa-tv"></i> 17.3" 4K OLED</p>
+                        <p><i class="fas fa-cubes"></i> RTX A5500 16Go</p>
+                    </div>
+                    <div class="price">2 160 845 FCFA</div>
+                    <button class="add-to-cart" data-product="Workstation Elite" data-price="3299">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+            <!-- MacBook Air M2 - Minuit -->
+<div class="product-card" data-category="ultrabook" data-price="1500">
+    <div class="product-badge">Apple</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="MacBook Air M2">
+    <div class="product-info">
+        <h3>MacBook Air M2 - Minuit</h3>
+        <div class="specs">
+            <p><i class="fab fa-apple"></i> M2 8-core</p>
+            <p><i class="fas fa-memory"></i> 8 Go RAM unifiée</p>
+            <p><i class="fas fa-hdd"></i> 256 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 13.6" Liquid Retina</p>
+            <p><i class="fas fa-battery-full"></i> Jusqu'à 18h</p>
+        </div>
+        <div class="price">900 000 FCFA</div>
+        <button class="add-to-cart" data-product="MacBook Air M2 - Minuit" data-price="900000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Asus TUF Dash F15 - Gris Mécanique -->
+<div class="product-card" data-category="gaming" data-price="1300">
+    <div class="product-badge">Asus</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Asus TUF Dash F15">
+    <div class="product-info">
+        <h3>Asus TUF Dash F15 - Gris Mécanique</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-12650H</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 15.6" FHD 144Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3060 6Go</p>
+        </div>
+        <div class="price">780 000 FCFA</div>
+        <button class="add-to-cart" data-product="Asus TUF Dash F15 - Gris Mécanique" data-price="780000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- HP Envy x360 - Argent Naturel -->
+<div class="product-card" data-category="ultrabook" data-price="1200">
+    <div class="product-badge">HP</div>
+    <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="HP Envy x360">
+    <div class="product-info">
+        <h3>HP Envy x360 - Argent Naturel</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 7 5825U</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR4</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 13.3" FHD Touch</p>
+            <p><i class="fas fa-sync-alt"></i> Écran 360°</p>
+        </div>
+        <div class="price">720 000 FCFA</div>
+        <button class="add-to-cart" data-product="HP Envy x360 - Argent Naturel" data-price="720000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Lenovo Yoga 7i - Vert Forêt -->
+<div class="product-card" data-category="ultrabook" data-price="1100">
+    <div class="product-badge">Lenovo</div>
+    <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lenovo Yoga 7i">
+    <div class="product-info">
+        <h3>Lenovo Yoga 7i - Vert Forêt</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 14" 2.8K OLED</p>
+            <p><i class="fas fa-sync-alt"></i> Écran 360°</p>
+        </div>
+        <div class="price">660 000 FCFA</div>
+        <button class="add-to-cart" data-product="Lenovo Yoga 7i - Vert Forêt" data-price="660000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Dell G15 - Noir Ombragé -->
+<div class="product-card" data-category="gaming" data-price="1400">
+    <div class="product-badge">Dell</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Dell G15">
+    <div class="product-info">
+        <h3>Dell G15 - Noir Ombragé</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 7 6800H</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 15.6" QHD 165Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3060 6Go</p>
+        </div>
+        <div class="price">840 000 FCFA</div>
+        <button class="add-to-cart" data-product="Dell G15 - Noir Ombragé" data-price="840000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Acer Predator Helios 300 - Bleu Électrique -->
+<div class="product-card" data-category="gaming" data-price="1800">
+    <div class="product-badge">Acer</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Acer Predator Helios 300">
+    <div class="product-info">
+        <h3>Predator Helios 300 - Bleu Électrique</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-12700H</p>
+            <p><i class="fas fa-memory"></i> 32 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 15.6" QHD 240Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3070 Ti 8Go</p>
+        </div>
+        <div class="price">1 080 000 FCFA</div>
+        <button class="add-to-cart" data-product="Predator Helios 300 - Bleu Électrique" data-price="1080000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- MSI Modern 14 - Blanc Nacré -->
+<div class="product-card" data-category="bureautique" data-price="950">
+    <div class="product-badge">MSI</div>
+    <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="MSI Modern 14">
+    <div class="product-info">
+        <h3>MSI Modern 14 - Blanc Nacré</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i5-1240P</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 14" FHD IPS</p>
+            <p><i class="fas fa-weight"></i> 1.3 kg</p>
+        </div>
+        <div class="price">570 000 FCFA</div>
+        <button class="add-to-cart" data-product="MSI Modern 14 - Blanc Nacré" data-price="570000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Asus ZenBook 14 - Bleu Céleste -->
+<div class="product-card" data-category="ultrabook" data-price="1300">
+    <div class="product-badge">Asus</div>
+    <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Asus ZenBook 14">
+    <div class="product-info">
+        <h3>ZenBook 14 - Bleu Céleste</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 7 5800U</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 14" FHD OLED</p>
+            <p><i class="fas fa-weight"></i> 1.39 kg</p>
+        </div>
+        <div class="price">780 000 FCFA</div>
+        <button class="add-to-cart" data-product="ZenBook 14 - Bleu Céleste" data-price="780000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- HP Omen 16 - Noir Mat -->
+<div class="product-card" data-category="gaming" data-price="1600">
+    <div class="product-badge">HP</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="HP Omen 16">
+    <div class="product-info">
+        <h3>HP Omen 16 - Noir Mat</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-12700H</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 16.1" QHD 165Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3070 8Go</p>
+        </div>
+        <div class="price">960 000 FCFA</div>
+        <button class="add-to-cart" data-product="HP Omen 16 - Noir Mat" data-price="960000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+<!-- MSI Katana GF66 - Rouge -->
+<div class="product-card" data-category="gaming" data-price="1250">
+    <div class="product-badge">MSI</div>
+    <img src="https://images.unsplash.com/photo-1593642702821-8bceb7c06691?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="MSI Katana GF66">
+    <div class="product-info">
+        <h3>MSI Katana GF66 - Rouge</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-12650H</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR4</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 15.6" FHD 144Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3060 6Go</p>
+        </div>
+        <div class="price">750 000 FCFA</div>
+        <button class="add-to-cart" data-product="MSI Katana GF66 - Rouge" data-price="750000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- HP Pavilion 15 - Bleu Nuit -->
+<div class="product-card" data-category="bureautique" data-price="700">
+    <div class="product-badge">HP</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="HP Pavilion 15">
+    <div class="product-info">
+        <h3>HP Pavilion 15 - Bleu Nuit</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 5 5600U</p>
+            <p><i class="fas fa-memory"></i> 8 Go RAM DDR4</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 15.6" FHD IPS</p>
+            <p><i class="fas fa-battery-full"></i> Jusqu'à 8h</p>
+        </div>
+        <div class="price">420 000 FCFA</div>
+        <button class="add-to-cart" data-product="HP Pavilion 15 - Bleu Nuit" data-price="420000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Lenovo Legion 5 - Gris Acier -->
+<div class="product-card" data-category="gaming" data-price="1450">
+    <div class="product-badge">Lenovo</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lenovo Legion 5">
+    <div class="product-info">
+        <h3>Lenovo Legion 5 - Gris Acier</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 7 5800H</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR4</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 15.6" FHD 165Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3060 6Go</p>
+        </div>
+        <div class="price">870 000 FCFA</div>
+        <button class="add-to-cart" data-product="Lenovo Legion 5 - Gris Acier" data-price="870000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Dell XPS 13 - Blanc Nacré -->
+<div class="product-card" data-category="ultrabook" data-price="1600">
+    <div class="product-badge">Dell</div>
+    <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Dell XPS 13">
+    <div class="product-info">
+        <h3>Dell XPS 13 - Blanc Nacré</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR5</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 13.4" 4K Touch</p>
+            <p><i class="fas fa-weight"></i> 1.2 kg</p>
+        </div>
+        <div class="price">960 000 FCFA</div>
+        <button class="add-to-cart" data-product="Dell XPS 13 - Blanc Nacré" data-price="960000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Acer Nitro 5 - Noir Rouge -->
+<div class="product-card" data-category="gaming" data-price="1100">
+    <div class="product-badge">Acer</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Acer Nitro 5">
+    <div class="product-info">
+        <h3>Acer Nitro 5 - Noir Rouge</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i5-11400H</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR4</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 15.6" FHD 144Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3050 Ti 4Go</p>
+        </div>
+        <div class="price">660 000 FCFA</div>
+        <button class="add-to-cart" data-product="Acer Nitro 5 - Noir Rouge" data-price="660000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Asus ROG Zephyrus G14 - Blanc Lune -->
+<div class="product-card" data-category="gaming" data-price="1800">
+    <div class="product-badge">Asus</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Asus ROG Zephyrus G14">
+    <div class="product-info">
+        <h3>Asus ROG Zephyrus G14 - Blanc Lune</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 9 6900HS</p>
+            <p><i class="fas fa-memory"></i> 32 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 14" QHD+ 165Hz</p>
+            <p><i class="fas fa-gamepad"></i> RX 6800S 8Go</p>
+        </div>
+        <div class="price">1 080 000 FCFA</div>
+        <button class="add-to-cart" data-product="Asus ROG Zephyrus G14 - Blanc Lune" data-price="1080000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Lenovo ThinkPad X1 Carbon - Noir Carbone -->
+<div class="product-card" data-category="bureautique" data-price="1700">
+    <div class="product-badge">Lenovo</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="ThinkPad X1 Carbon">
+    <div class="product-info">
+        <h3>ThinkPad X1 Carbon - Noir Carbone</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 14" WUXGA</p>
+            <p><i class="fas fa-fingerprint"></i> Lecteur d'empreinte</p>
+        </div>
+        <div class="price">1 020 000 FCFA</div>
+        <button class="add-to-cart" data-product="ThinkPad X1 Carbon - Noir Carbone" data-price="1020000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- HP Spectre x360 - Bleu Nuit -->
+<div class="product-card" data-category="ultrabook" data-price="1500">
+    <div class="product-badge">HP</div>
+    <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="HP Spectre x360">
+    <div class="product-info">
+        <h3>HP Spectre x360 - Bleu Nuit</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 13.5" 3K2K OLED</p>
+            <p><i class="fas fa-sync-alt"></i> Écran 360°</p>
+        </div>
+        <div class="price">900 000 FCFA</div>
+        <button class="add-to-cart" data-product="HP Spectre x360 - Bleu Nuit" data-price="900000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- MSI Prestige 14 - Gris Sidéral -->
+<div class="product-card" data-category="ultrabook" data-price="1400">
+    <div class="product-badge">MSI</div>
+    <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="MSI Prestige 14">
+    <div class="product-info">
+        <h3>MSI Prestige 14 - Gris Sidéral</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 14" QHD+ 90Hz</p>
+            <p><i class="fas fa-weight"></i> 1.29 kg</p>
+        </div>
+        <div class="price">840 000 FCFA</div>
+        <button class="add-to-cart" data-product="MSI Prestige 14 - Gris Sidéral" data-price="840000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Acer Swift 3 - Bleu Azur -->
+<div class="product-card" data-category="bureautique" data-price="850">
+    <div class="product-badge">Acer</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Acer Swift 3">
+    <div class="product-info">
+        <h3>Acer Swift 3 - Bleu Azur</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 5 5625U</p>
+            <p><i class="fas fa-memory"></i> 8 Go RAM LPDDR4X</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 14" FHD IPS</p>
+            <p><i class="fas fa-battery-full"></i> Jusqu'à 11h</p>
+        </div>
+        <div class="price">510 000 FCFA</div>
+        <button class="add-to-cart" data-product="Acer Swift 3 - Bleu Azur" data-price="510000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Lenovo IdeaPad 5 - Gris Sidéral -->
+<div class="product-card" data-category="bureautique" data-price="900">
+    <div class="product-badge">Lenovo</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lenovo IdeaPad 5">
+    <div class="product-info">
+        <h3>IdeaPad 5 - Gris Sidéral</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 5 5600U</p>
+            <p><i class="fas fa-memory"></i> 8 Go RAM DDR4</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 15.6" FHD IPS</p>
+            <p><i class="fas fa-battery-full"></i> Jusqu'à 12h</p>
+        </div>
+        <div class="price">540 000 FCFA</div>
+        <button class="add-to-cart" data-product="IdeaPad 5 - Gris Sidéral" data-price="540000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+            <!-- PC Gamer 3 -->
+            <div class="product-card" data-category="gaming" data-price="2199">
+                <div class="product-badge">Gaming</div>
+                <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Gaming Titan">
+                <div class="product-info">
+                    <h3>Gaming Titan</h3>
+                    <div class="specs">
+                        <p><i class="fas fa-microchip"></i> Intel i9-12900HX</p>
+                        <p><i class="fas fa-memory"></i> 32 Go RAM DDR5</p>
+                        <p><i class="fas fa-hdd"></i> 2 To SSD NVMe</p>
+                        <p><i class="fas fa-tv"></i> 16" QHD+ 240Hz</p>
+                        <p><i class="fas fa-gamepad"></i> RTX 3080 Ti 16Go</p>
+                    </div>
+                    <div class="price">1 440 345 FCFA</div>
+                    <button class="add-to-cart" data-product="Gaming Titan" data-price="2199">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+            <!-- Asus VivoBook S15 - Vert Émeraude -->
+<div class="product-card" data-category="bureautique" data-price="1100">
+    <div class="product-badge">Asus</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Asus VivoBook S15">
+    <div class="product-info">
+        <h3>VivoBook S15 - Vert Émeraude</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR4</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 15.6" FHD OLED</p>
+            <p><i class="fas fa-paint-brush"></i> Design mince et léger</p>
+        </div>
+        <div class="price">660 000 FCFA</div>
+        <button class="add-to-cart" data-product="VivoBook S15 - Vert Émeraude" data-price="660000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- HP EliteBook 840 - Gris Graphite -->
+<div class="product-card" data-category="bureautique" data-price="1400">
+    <div class="product-badge">HP</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="HP EliteBook 840">
+    <div class="product-info">
+        <h3>EliteBook 840 - Gris Graphite</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1265U</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 14" FHD Touch</p>
+            <p><i class="fas fa-fingerprint"></i> Lecteur d'empreinte</p>
+        </div>
+        <div class="price">840 000 FCFA</div>
+        <button class="add-to-cart" data-product="EliteBook 840 - Gris Graphite" data-price="840000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Lenovo ThinkPad X1 Extreme - Noir Carbone -->
+<div class="product-card" data-category="workstation" data-price="2200">
+    <div class="product-badge">Lenovo</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="ThinkPad X1 Extreme">
+    <div class="product-info">
+        <h3>ThinkPad X1 Extreme - Noir Carbone</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-12700H</p>
+            <p><i class="fas fa-memory"></i> 32 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 16" 4K Touch</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3060 6Go</p>
+        </div>
+        <div class="price">1 320 000 FCFA</div>
+        <button class="add-to-cart" data-product="ThinkPad X1 Extreme - Noir Carbone" data-price="1320000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Dell Inspiron 15 - Bleu Océan -->
+<div class="product-card" data-category="bureautique" data-price="950">
+    <div class="product-badge">Dell</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Dell Inspiron 15">
+    <div class="product-info">
+        <h3>Inspiron 15 - Bleu Océan</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 7 5825U</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM DDR4</p>
+            <p><i class="fas fa-hdd"></i> 512 Go SSD</p>
+            <p><i class="fas fa-tv"></i> 15.6" FHD IPS</p>
+            <p><i class="fas fa-battery-full"></i> Jusqu'à 10h</p>
+        </div>
+        <div class="price">570 000 FCFA</div>
+        <button class="add-to-cart" data-product="Inspiron 15 - Bleu Océan" data-price="570000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- MSI Creator Z16 - Gris Platine -->
+<div class="product-card" data-category="workstation" data-price="2400">
+    <div class="product-badge">MSI</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="MSI Creator Z16">
+    <div class="product-info">
+        <h3>Creator Z16 - Gris Platine</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i9-12900H</p>
+            <p><i class="fas fa-memory"></i> 32 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 2 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 16" QHD+ 120Hz</p>
+            <p><i class="fas fa-palette"></i> RTX 3070 Ti 8Go</p>
+        </div>
+        <div class="price">1 440 000 FCFA</div>
+        <button class="add-to-cart" data-product="Creator Z16 - Gris Platine" data-price="1440000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Acer Swift X - Bleu Saphir -->
+<div class="product-card" data-category="ultrabook" data-price="1300">
+    <div class="product-badge">Acer</div>
+    <img src="https://images.unsplash.com/photo-1496181133205-8095de01c574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Acer Swift X">
+    <div class="product-info">
+        <h3>Swift X - Bleu Saphir</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 7 5800U</p>
+            <p><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 14" FHD IPS</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3050 Ti 4Go</p>
+        </div>
+        <div class="price">780 000 FCFA</div>
+        <button class="add-to-cart" data-product="Swift X - Bleu Saphir" data-price="780000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Asus ExpertBook B9 - Gris Anthracite -->
+<div class="product-card" data-category="bureautique" data-price="1900">
+    <div class="product-badge">Asus</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Asus ExpertBook B9">
+    <div class="product-info">
+        <h3>ExpertBook B9 - Gris Anthracite</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+            <p><i class="fas fa-memory"></i> 32 Go RAM LPDDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD</p>
+            <p><i class="fas fa-tv"></i> 14" FHD IPS</p>
+            <p><i class="fas fa-weight"></i> 880g</p>
+        </div>
+        <div class="price">1 140 000 FCFA</div>
+        <button class="add-to-cart" data-product="ExpertBook B9 - Gris Anthracite" data-price="1140000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- HP ZBook Firefly - Bleu Minuit -->
+<div class="product-card" data-category="workstation" data-price="2000">
+    <div class="product-badge">HP</div>
+    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e6c80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="HP ZBook Firefly">
+    <div class="product-info">
+        <h3>ZBook Firefly - Bleu Minuit</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i7-1260P</p>
+            <p><i class="fas fa-memory"></i> 32 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 1 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 15.6" 4K DreamColor</p>
+            <p><i class="fas fa-cubes"></i> T550 4Go</p>
+        </div>
+        <div class="price">1 200 000 FCFA</div>
+        <button class="add-to-cart" data-product="ZBook Firefly - Bleu Minuit" data-price="1200000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Lenovo Legion 7 - Gris Sidéral -->
+<div class="product-card" data-category="gaming" data-price="2100">
+    <div class="product-badge">Lenovo</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lenovo Legion 7">
+    <div class="product-info">
+        <h3>Legion 7 - Gris Sidéral</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> AMD Ryzen 9 6900HX</p>
+            <p><i class="fas fa-memory"></i> 32 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 2 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 16" QHD+ 165Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3080 8Go</p>
+        </div>
+        <div class="price">1 260 000 FCFA</div>
+        <button class="add-to-cart" data-product="Legion 7 - Gris Sidéral" data-price="1260000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+<!-- Dell Alienware m15 R7 - Noir Légend -->
+<div class="product-card" data-category="gaming" data-price="2300">
+    <div class="product-badge">Dell</div>
+    <img src="https://images.unsplash.com/photo-1593642632823-8b785c0b1135?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Dell Alienware m15 R7">
+    <div class="product-info">
+        <h3>Alienware m15 R7 - Noir Légend</h3>
+        <div class="specs">
+            <p><i class="fas fa-microchip"></i> Intel i9-12900H</p>
+            <p><i class="fas fa-memory"></i> 32 Go RAM DDR5</p>
+            <p><i class="fas fa-hdd"></i> 2 To SSD NVMe</p>
+            <p><i class="fas fa-tv"></i> 15.6" QHD 240Hz</p>
+            <p><i class="fas fa-gamepad"></i> RTX 3080 Ti 16Go</p>
+        </div>
+        <div class="price">1 380 000 FCFA</div>
+        <button class="add-to-cart" data-product="Alienware m15 R7 - Noir Légend" data-price="1380000">
+            <i class="fas fa-cart-plus"></i> Ajouter au panier
+        </button>
+    </div>
+</div>
+
+            <!-- Suite des 45 autres modèles... -->
+            <!-- ... (le reste des 45 modèles sera ajouté dans les prochaines étapes) ... -->
+
+        </section>
+    </main>
+
+    <div class="cart-notification" id="cartNotification">
+        <span id="notificationText"></span>
+    </div>
+    <!-- Notification d'ajout au panier -->
+<div class="cart-notification" id="cartNotification">
+    <span id="notificationText"></span>
+</div>
+
+<!-- Compteur d'articles dans le panier (à placer dans votre barre de navigation) -->
+<span class="cart-counter" id="cart-counter"></span>
+</body>
+</html>

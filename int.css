@@ -1,169 +1,92 @@
-/* Styles pour la barre de navigation */
-.navbar {
-    background-color: #2c3e50;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s;
+div{
+  background-image: url("image/032f248a-2648-4ecf-993b-5852a8e522ba.jpeg");
 }
-
-.navbar a:hover {
-    background-color: #34495e;
-}
-
-.navbar a.active {
-    background-color: #3498db;
-}
-
-/* Style pour le menu déroulant */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 20px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Style pour le bouton menu sur mobile */
-.navbar .icon {
-    display: none;
-}
-
-/* Media query pour les écrans mobiles */
-@media screen and (max-width: 600px) {
-    .navbar a:not(:first-child), .dropdown .dropbtn {
-        display: none;
-    }
-    .navbar a.icon {
-        float: right;
-        display: block;
-    }
-    .navbar.responsive {position: relative;}
-    .navbar.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    .navbar.responsive .dropdown {float: none;}
-    .navbar.responsive .dropdown-content {position: relative;}
-    .navbar.responsive .dropdown .dropbtn {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-}
-
-/* ---- Reset de base ---- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* ---- Style global du site ---- */
-body {
-    background-image:url(image/ac7b099a-dede-40ab-a072-f2dfeee298a3.jpeg);
-    padding: 40px;
-    color: #000000;
-    image-orientation: from-image;
-}
-
-/* ---- Conteneur principal ---- */
 .container {
-    max-width: 600px;
-    margin: auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  align-content: start;
+}
+.item:nth-child(4) {
+  width: 10%;
+  height: 5%;
 }
 
-/* ---- Titre ---- */
-h1 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 28px;
-    color: #000000; /* bleu moderne */
+.item:nth-child(2) {
+  width: 25%;
+  height: 75%;
 }
 
-/* ---- Liste ordonnée ---- */
-ol {
-    margin-left: 25px;
-    font-size: 18px;
+.item:nth-child(3) {
+  flex-grow: 1;
+  height: 75%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 10;
+    background: url("image/6d7471bd-054c-474b-ac06-c0205ec8c1fa.jpeg") fixed no-repeat center center / cover;
+}
+.zoom-overlay{
+    position: relative;
+    width: 600px;
+    height: 30px;
+    overflow:hidden;
+    cursor:wait ;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 50px 25px 30px rgba(7, 1, 1, 0.7);
 }
 
-ol li {
-    margin-bottom: 15px;
+.zoom-overlay{
+    width: 900px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 10s ease;
 }
 
-/* ---- Liens ---- */
-a {
-    text-decoration: none;
-    color: #084fe7;
-    font-weight: bold;
-    transition: 0.3s ease;
+/* Style pour les petits textes en gras */
+.specs p, .price, .product-badge, .add-to-cart,
+.product-specs li, .product-price, .cart-item-details,
+.checkout-summary p, .order-details p, .account-info p,
+.filter-options select, .filter-options option {
+    font-weight: bold !important;
 }
-
-a:hover {
-    color: #700202;
-    text-decoration: underline;
+.overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: hwb(0 0% 100% / 0.616);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-
-/* ---- Footer simple ---- */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #000000;
+.zoom-overlay:hover img{
+  transform: scale(1.1);
+}
+.zoom-overlay:hover .overlay{
+  opacity: 1;
+}
+button{
+  background-color: #1e07ee80;
+  margin-left: 300px;
+  border-radius: 10px;
+  padding: 0px;
+  width: 300px;
+  border-radius: 300px ;
+   box-shadow: 10px 0px 5px 10px #000000e8;
+}
+button a{
+  color: #fffdfd;
+  font-weight: normal;
+  font-size: 15px;
 }

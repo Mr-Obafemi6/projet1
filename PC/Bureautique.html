@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Bureautique - FuturTech</title>
+    <link rel="stylesheet" href="fichier/css/portable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../js/cart.js" defer></script>
+    <span class="cart-counter" id="cart-counter"></span>
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>PC Bureautique</h1>
+            <a href="../accueil.html" class="btn" style="background-color: #2563eb; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center;">
+                <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Retour à l'accueil
+            </a>
+        </div>
+        <div class="filters">
+            <select id="categoryFilter">
+                <option value="all">Toutes les catégories</option>
+                <option value="entree">Entrée de gamme</option>
+                <option value="moyen">Milieu de gamme</option>
+                <option value="haut">Haut de gamme</option>
+            </select>
+            <select id="priceFilter">
+                <option value="all">Tous les prix</option>
+                <option value="0-200000">Moins de 200 000 FCFA</option>
+                <option value="200000-400000">200 000 - 400 000 FCFA</option>
+                <option value="400000-800000">400 000 - 800 000 FCFA</option>
+                <option value="800000+">Plus de 800 000 FCFA</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="products-grid">
+        <!-- PC Bureautique Entrée de gamme -->
+        <div class="product-card" data-category="entree" data-price="150000">
+            <img src="https://m.media-amazon.com/images/I/61L1ItFgFHL._AC_UF1000,1000_QL80_.jpg" alt="PC Bureautique Entrée de Gamme" class="product-image">
+            <h3 class="product-title">HP 255 G8 - PC Portable 15.6" HD</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> AMD 3020e (2 cœurs, 2.6 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 256 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" HD (1366x768)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 7h d'autonomie</li>
+            </ul>
+            <div class="product-price">159 900 FCFA</div>
+            <button class="add-to-cart" data-product="HP 255 G8" data-price="159900">Ajouter au panier</button>
+        </div>
+
+        <!-- PC Bureautique Milieu de gamme -->
+        <div class="product-card" data-category="moyen" data-price="350000">
+            <img src="https://m.media-amazon.com/images/I/71S8U9VzLTL._AC_UF1000,1000_QL80_.jpg" alt="PC Bureautique Milieu de Gamme" class="product-image">
+            <h3 class="product-title">Lenovo ThinkPad E15 Gen 3</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> AMD Ryzen 5 5500U (6 cœurs, 4.0 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD NVMe</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" FHD (1920x1080) Anti-éblouissant</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 10h d'autonomie</li>
+            </ul>
+            <div class="product-price">349 900 FCFA</div>
+            <button class="add-to-cart" data-product="Lenovo ThinkPad E15" data-price="349900">Ajouter au panier</button>
+        </div>
+
+        <!-- PC Bureautique Haut de gamme -->
+        <div class="product-card" data-category="haut" data-price="750000">
+            <img src="https://m.media-amazon.com/images/I/61L1ItFgFHL._AC_UF1000,1000_QL80_.jpg" alt="PC Bureautique Haut de Gamme" class="product-image">
+            <h3 class="product-title">Dell XPS 15 9520</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i7-12700H (14 cœurs, 4.7 GHz)</li>
+                <li><i class="fas fa-memory"></i> 32 Go RAM DDR5</li>
+                <li><i class="fas fa-hdd"></i> 1 To SSD NVMe</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" 4K UHD+ (3840x2400) Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 12h d'autonomie</li>
+            </ul>
+            <div class="product-price">749 900 FCFA</div>
+            <button class="add-to-cart" data-product="Dell XPS 15 9520" data-price="749900">Ajouter au panier</button>
+        </div>
+
+        <!-- Autres modèles... -->
+        <div class="product-card" data-category="entree" data-price="180000">
+            <img src="https://m.media-amazon.com/images/I/71S8U9VzLTL._AC_UF1000,1000_QL80_.jpg" alt="Acer Aspire 3" class="product-image">
+            <h3 class="product-title">Acer Aspire 3 A315-56</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i3-1005G1 (2 cœurs, 3.4 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" FHD (1920x1080)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 8h d'autonomie</li>
+            </ul>
+            <div class="product-price">179 900 FCFA</div>
+            <button class="add-to-cart" data-product="Acer Aspire 3" data-price="179900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="moyen" data-price="420000">
+            <img src="https://m.media-amazon.com/images/I/61L1ItFgFHL._AC_UF1000,1000_QL80_.jpg" alt="ASUS VivoBook Pro 15" class="product-image">
+            <h3 class="product-title">ASUS VivoBook Pro 15</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> AMD Ryzen 7 5800H (8 cœurs, 4.4 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 1 To SSD NVMe</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" FHD (1920x1080) 144Hz</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 9h d'autonomie</li>
+            </ul>
+            <div class="product-price">419 900 FCFA</div>
+            <button class="add-to-cart" data-product="ASUS VivoBook Pro 15" data-price="419900">Ajouter au panier</button>
+        </div>
+        <!-- Nouveaux produits bureautiques -->
+        <div class="product-card" data-category="haut" data-price="899900">
+            <img src="https://m.media-amazon.com/images/I/71pCUEBhODL._AC_UF1000,1000_QL80_.jpg" alt="Dell XPS 13" class="product-image">
+            <h3 class="product-title">Dell XPS 13 9310</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i7-1195G7 (4 cœurs, 5.0 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 13.4" 4K UHD+ Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 14h d'autonomie</li>
+            </ul>
+            <div class="product-price">899 900 FCFA</div>
+            <button class="add-to-cart" data-product="Dell XPS 13" data-price="899900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="moyen" data-price="550000">
+            <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UF1000,1000_QL80_.jpg" alt="Lenovo ThinkPad X1 Carbon" class="product-image">
+            <h3 class="product-title">Lenovo ThinkPad X1 Carbon</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i5-1135G7 (4 cœurs, 4.2 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 14" FHD (1920x1080)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 15h d'autonomie</li>
+            </ul>
+            <div class="product-price">550 000 FCFA</div>
+            <button class="add-to-cart" data-product="Lenovo ThinkPad X1 Carbon" data-price="550000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="entree" data-price="299900">
+            <img src="https://m.media-amazon.com/images/I/71rXSVqET9L._AC_UF1000,1000_QL80_.jpg" alt="HP 14-dq2035nf" class="product-image">
+            <h3 class="product-title">HP 14-dq2035nf</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i3-1115G4 (2 cœurs, 4.1 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 256 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 14" HD (1366x768)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 9h d'autonomie</li>
+            </ul>
+            <div class="product-price">299 900 FCFA</div>
+            <button class="add-to-cart" data-product="HP 14-dq2035nf" data-price="299900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="moyen" data-price="480000">
+            <img src="https://m.media-amazon.com/images/I/71qod7fKwYL._AC_UF1000,1000_QL80_.jpg" alt="Acer Swift 5" class="product-image">
+            <h3 class="product-title">Acer Swift 5 SF514-55T</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i5-1135G7 (4 cœurs, 4.2 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 14" FHD IPS Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 17h d'autonomie</li>
+            </ul>
+            <div class="product-price">480 000 FCFA</div>
+            <button class="add-to-cart" data-product="Acer Swift 5" data-price="480000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="haut" data-price="1250000">
+            <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UF1000,1000_QL80_.jpg" alt="MacBook Pro 14" class="product-image">
+            <h3 class="product-title">MacBook Pro 14" M1 Pro</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Apple M1 Pro (8 cœurs CPU, 14 cœurs GPU)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM unifiée</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 14.2" Liquid Retina XDR</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 17h de lecture vidéo</li>
+            </ul>
+            <div class="product-price">1 250 000 FCFA</div>
+            <button class="add-to-cart" data-product="MacBook Pro 14 M1 Pro" data-price="1250000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="entree" data-price="220000">
+            <img src="https://m.media-amazon.com/images/I/71rXSVqET9L._AC_UF1000,1000_QL80_.jpg" alt="Lenovo IdeaPad 3" class="product-image">
+            <h3 class="product-title">Lenovo IdeaPad 3 15ITL6</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i3-1115G4 (2 cœurs, 4.1 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 256 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" HD (1366x768)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 7h d'autonomie</li>
+            </ul>
+            <div class="product-price">220 000 FCFA</div>
+            <button class="add-to-cart" data-product="Lenovo IdeaPad 3" data-price="220000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="moyen" data-price="389900">
+            <img src="https://m.media-amazon.com/images/I/71pCUEBhODL._AC_UF1000,1000_QL80_.jpg" alt="ASUS ZenBook 14" class="product-image">
+            <h3 class="product-title">ASUS ZenBook 14 UX425EA</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i5-1135G7 (4 cœurs, 4.2 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 14" FHD (1920x1080)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 12h d'autonomie</li>
+            </ul>
+            <div class="product-price">389 900 FCFA</div>
+            <button class="add-to-cart" data-product="ASUS ZenBook 14" data-price="389900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="haut" data-price="1350000">
+            <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UF1000,1000_QL80_.jpg" alt="HP Spectre x360" class="product-image">
+            <h3 class="product-title">HP Spectre x360 14</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i7-1165G7 (4 cœurs, 4.7 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 1 To SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 13.5" 3K2K OLED Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 11h d'autonomie</li>
+            </ul>
+            <div class="product-price">1 350 000 FCFA</div>
+            <button class="add-to-cart" data-product="HP Spectre x360 14" data-price="1350000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="entree" data-price="259900">
+            <img src="https://m.media-amazon.com/images/I/71rXSVqET9L._AC_UF1000,1000_QL80_.jpg" alt="Dell Inspiron 15 3000" class="product-image">
+            <h3 class="product-title">Dell Inspiron 15 3501</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i3-1005G1 (2 cœurs, 3.4 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 256 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" FHD (1920x1080)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 6h d'autonomie</li>
+            </ul>
+            <div class="product-price">259 900 FCFA</div>
+            <button class="add-to-cart" data-product="Dell Inspiron 15 3501" data-price="259900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="moyen" data-price="425000">
+            <img src="https://m.media-amazon.com/images/I/71pCUEBhODL._AC_UF1000,1000_QL80_.jpg" alt="Lenovo Yoga 7i" class="product-image">
+            <h3 class="product-title">Lenovo Yoga 7i 14ITL5</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i5-1135G7 (4 cœurs, 4.2 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 14" FHD IPS Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 15h d'autonomie</li>
+            </ul>
+            <div class="product-price">425 000 FCFA</div>
+            <button class="add-to-cart" data-product="Lenovo Yoga 7i" data-price="425000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="haut" data-price="1120000">
+            <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UF1000,1000_QL80_.jpg" alt="Microsoft Surface Laptop 4" class="product-image">
+            <h3 class="product-title">Microsoft Surface Laptop 4 15"</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> AMD Ryzen 7 4980U (8 cœurs, 4.4 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 15" PixelSense Touch (2496x1664)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 17.5h d'autonomie</li>
+            </ul>
+            <div class="product-price">1 120 000 FCFA</div>
+            <button class="add-to-cart" data-product="Surface Laptop 4 15\"" data-price="1120000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="entree" data-price="289900">
+            <img src="https://m.media-amazon.com/images/I/71rXSVqET9L._AC_UF1000,1000_QL80_.jpg" alt="Acer Aspire 5" class="product-image">
+            <h3 class="product-title">Acer Aspire 5 A515-56</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i3-1115G4 (2 cœurs, 4.1 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 256 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" FHD IPS</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 8h d'autonomie</li>
+            </ul>
+            <div class="product-price">289 900 FCFA</div>
+            <button class="add-to-cart" data-product="Acer Aspire 5" data-price="289900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="moyen" data-price="499900">
+            <img src="https://m.media-amazon.com/images/I/71pCUEBhODL._AC_UF1000,1000_QL80_.jpg" alt="HP Envy x360" class="product-image">
+            <h3 class="product-title">HP Envy x360 13-ay</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> AMD Ryzen 5 4500U (6 cœurs, 4.0 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 13.3" FHD IPS Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 18h d'autonomie</li>
+            </ul>
+            <div class="product-price">499 900 FCFA</div>
+            <button class="add-to-cart" data-product="HP Envy x360" data-price="499900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="haut" data-price="1450000">
+            <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UF1000,1000_QL80_.jpg" alt="Dell XPS 15" class="product-image">
+            <h3 class="product-title">Dell XPS 15 9510</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i7-11800H (8 cœurs, 4.6 GHz)</li>
+                <li><i class="fas fa-memory"></i> 32 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 1 To SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" 4K UHD+ Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 12h d'autonomie</li>
+            </ul>
+            <div class="product-price">1 450 000 FCFA</div>
+            <button class="add-to-cart" data-product="Dell XPS 15" data-price="1450000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="entree" data-price="269900">
+            <img src="https://m.media-amazon.com/images/I/71rXSVqET9L._AC_UF1000,1000_QL80_.jpg" alt="ASUS VivoBook 15" class="product-image">
+            <h3 class="product-title">ASUS VivoBook 15 X515EA</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i3-1115G4 (2 cœurs, 4.1 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 15.6" FHD (1920x1080)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 7h d'autonomie</li>
+            </ul>
+            <div class="product-price">269 900 FCFA</div>
+            <button class="add-to-cart" data-product="ASUS VivoBook 15" data-price="269900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="moyen" data-price="529900">
+            <img src="https://m.media-amazon.com/images/I/71pCUEBhODL._AC_UF1000,1000_QL80_.jpg" alt="LG Gram 17" class="product-image">
+            <h3 class="product-title">LG Gram 17Z90P</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i5-1135G7 (4 cœurs, 4.2 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 17" WQXGA (2560x1600) IPS</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 19.5h d'autonomie</li>
+            </ul>
+            <div class="product-price">529 900 FCFA</div>
+            <button class="add-to-cart" data-product="LG Gram 17" data-price="529900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="haut" data-price="1380000">
+            <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UF1000,1000_QL80_.jpg" alt="Razer Book 13" class="product-image">
+            <h3 class="product-title">Razer Book 13 RZ09-0357</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i7-1165G7 (4 cœurs, 4.7 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 13.4" 4K UHD Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 14h d'autonomie</li>
+            </ul>
+            <div class="product-price">1 380 000 FCFA</div>
+            <button class="add-to-cart" data-product="Razer Book 13" data-price="1380000">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="entree" data-price="239900">
+            <img src="https://m.media-amazon.com/images/I/71rXSVqET9L._AC_UF1000,1000_QL80_.jpg" alt="Lenovo IdeaPad Flex 5" class="product-image">
+            <h3 class="product-title">Lenovo IdeaPad Flex 5 14"</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> AMD Ryzen 3 5300U (4 cœurs, 3.8 GHz)</li>
+                <li><i class="fas fa-memory"></i> 8 Go RAM DDR4</li>
+                <li><i class="fas fa-hdd"></i> 256 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 14" FHD IPS Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 10h d'autonomie</li>
+            </ul>
+            <div class="product-price">239 900 FCFA</div>
+            <button class="add-to-cart" data-product="Lenovo IdeaPad Flex 5" data-price="239900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="moyen" data-price="479900">
+            <img src="https://m.media-amazon.com/images/I/71pCUEBhODL._AC_UF1000,1000_QL80_.jpg" alt="ASUS ExpertBook B9" class="product-image">
+            <h3 class="product-title">ASUS ExpertBook B9 B9400</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i5-1135G7 (4 cœurs, 4.2 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 512 Go SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 14" FHD (1920x1080)</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 24h d'autonomie</li>
+            </ul>
+            <div class="product-price">479 900 FCFA</div>
+            <button class="add-to-cart" data-product="ASUS ExpertBook B9" data-price="479900">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-category="haut" data-price="1550000">
+            <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UF1000,1000_QL80_.jpg" alt="HP Elite Dragonfly" class="product-image">
+            <h3 class="product-title">HP Elite Dragonfly G2</h3>
+            <ul class="product-specs">
+                <li><i class="fas fa-microchip"></i> Intel Core i7-1185G7 (4 cœurs, 4.8 GHz)</li>
+                <li><i class="fas fa-memory"></i> 16 Go RAM LPDDR4X</li>
+                <li><i class="fas fa-hdd"></i> 1 To SSD</li>
+                <li><i class="fas fa-desktop"></i> Écran 13.5" 3K2K Touch</li>
+                <li><i class="fas fa-battery-three-quarters"></i> Jusqu'à 24.5h d'autonomie</li>
+            </ul>
+            <div class="product-price">1 550 000 FCFA</div>
+            <button class="add-to-cart" data-product="HP Elite Dragonfly G2" data-price="1550000">Ajouter au panier</button>
+        </div>
+    </main>
+
+    <div class="cart-notification" id="cartNotification">
+        <span id="notificationText"></span>
+    </div>
+
+  
+
+
+</body>
+</html>

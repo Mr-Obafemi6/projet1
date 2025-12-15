@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement - PCHome</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +228 90 74 35 73 / 99 44 98 58</span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:gerardtchalla6@gmail.com" style="color: white; text-decoration: none;">gerardtchalla6@gmail.com</a></span>
+                </div>
+                <div class="auth-links">
+                    <a href="../Compte/mon-compte.html"><i class="fas fa-user"></i> Mon Compte</a>
+                    <a href="../Panier/panier.html"><i class="fas fa-shopping-cart"></i> Panier (3)</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="../interface.html">PC<span>Home</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="checkout-container">
+        <div class="container">
+            <!-- Étapes de commande -->
+            <div class="checkout-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Identification</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Livraison</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Paiement</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Confirmation</div>
+                </div>
+            </div>
+
+            <!-- Formulaire de paiement -->
+            <div class="checkout-form">
+                <h2 class="section-title">Méthode de paiement</h2>
+                
+                <form id="paymentForm">
+                    <div class="payment-methods">
+                        <div class="payment-method active" data-payment="card">
+                            <input type="radio" id="card" name="payment" checked>
+                            <label for="card" class="payment-method-label">
+                                <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="Carte bancaire" class="payment-icon">
+                                <div class="payment-details">
+                                    <div class="payment-title">Carte bancaire</div>
+                                    <div class="payment-description">Paiement sécurisé par carte bancaire</div>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-method" data-payment="orangemoney">
+                            <input type="radio" id="orangemoney" name="payment">
+                            <label for="orangemoney" class="payment-method-label">
+                                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2c/Orange_money_logo.svg/1200px-Orange_money_logo.svg.png" alt="Orange Money" class="payment-icon">
+                                <div class="payment-details">
+                                    <div class="payment-title">Orange Money</div>
+                                    <div class="payment-description">Paiement via votre compte Orange Money</div>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-method" data-payment="moovmoney">
+                            <input type="radio" id="moovmoney" name="payment">
+                            <label for="moovmoney" class="payment-method-label">
+                                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/9/9f/Logo_Moov_Africa.png/1200px-Logo_Moov_Africa.png" alt="Moov Money" class="payment-icon">
+                                <div class="payment-details">
+                                    <div class="payment-title">Moov Money</div>
+                                    <div class="payment-description">Paiement via votre compte Moov Money</div>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-method" data-payment="cash">
+                            <input type="radio" id="cash" name="payment">
+                            <label for="cash" class="payment-method-label">
+                                <i class="fas fa-money-bill-wave payment-icon" style="font-size: 24px; color: #28a745;"></i>
+                                <div class="payment-details">
+                                    <div class="payment-title">Paiement à la livraison</div>
+                                    <div class="payment-description">Payez en espèces à la livraison</div>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Détails de la carte -->
+                    <div id="cardDetails" class="card-details active">
+                        <div class="card-icons">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/visa-5-226460.png" alt="Visa" class="card-icon active" data-type="visa">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/mastercard-5-226460.png" alt="Mastercard" class="card-icon" data-type="mastercard">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/paypal-5-226460.png" alt="PayPal" class="card-icon" data-type="paypal">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cardNumber" class="form-label">Numéro de carte</label>
+                            <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cardName" class="form-label">Nom sur la carte</label>
+                            <input type="text" id="cardName" class="form-control" placeholder="John DOE" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate" class="form-label">Date d'expiration</label>
+                                <input type="text" id="expiryDate" class="form-control" placeholder="MM/AA" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="text" id="cvv" class="form-control" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Détails Orange Money -->
+                    <div id="orangeMoneyDetails" class="card-details">
+                        <div class="form-group">
+                            <label for="orangeNumber" class="form-label">Numéro Orange Money</label>
+                            <input type="tel" id="orangeNumber" class="form-control" placeholder="90 12 34 56" required>
+                        </div>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+                            Vous recevrez une demande de paiement sur votre téléphone pour confirmer la transaction.
+                        </p>
+                    </div>
+                    
+                    <!-- Détails Moov Money -->
+                    <div id="moovMoneyDetails" class="card-details">
+                        <div class="form-group">
+                            <label for="moovNumber" class="form-label">Numéro Moov Money</label>
+                            <input type="tel" id="moovNumber" class="form-control" placeholder="96 12 34 56" required>
+                        </div>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+                            Vous recevrez une demande de paiement sur votre téléphone pour confirmer la transaction.
+                        </p>
+                    </div>
+                    
+                    <!-- Paiement à la livraison -->
+                    <div id="cashDetails" class="card-details">
+                        <div class="form-group">
+                            <p style="margin-bottom: 15px;">
+                                <i class="fas fa-info-circle" style="color: var(--warning-color);"></i>
+                                Vous paierez en espèces lors de la livraison de votre commande.
+                            </p>
+                            <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+                                Veuillez préparer le montant exact. Des frais de service de 1 000 FCFA peuvent s'appliquer.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 30px;">
+                        <div class="form-check">
+                            <input type="checkbox" id="terms" class="form-check-input" required>
+                            <label for="terms" class="form-check-label">
+                                J'accepte les <a href="#" style="color: var(--primary-color);">conditions générales de vente</a> et la 
+                                <a href="#" style="color: var(--primary-color);">politique de confidentialité</a>.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Traitement de votre paiement...</p>
+                    </div>
+                    
+                    <button type="submit" class="btn" id="submitBtn">Payer maintenant</button>
+                    <a href="../Panier/panier.html" class="btn btn-secondary" style="margin-top: 15px;">Retour au panier</a>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Récapitulatif de commande -->
+        <aside class="order-summary">
+            <h2 class="section-title">Votre commande</h2>
+            
+            <div class="order-items">
+                <div class="order-item">
+                    <div class="order-item-details">
+                        <div class="order-item-name">PC Gamer Pro</div>
+                        <div class="order-item-quantity">Quantité: 1</div>
+                    </div>
+                    <div class="order-item-price">1 499 000 FCFA</div>
+                </div>
+                
+                <div class="order-item">
+                    <div class="order-item-details">
+                        <div class="order-item-name">Écran 27" 4K</div>
+                        <div class="order-item-quantity">Quantité: 1</div>
+                    </div>
+                    <div class="order-item-price">450 000 FCFA</div>
+                </div>
+                
+                <div class="order-item">
+                    <div class="order-item-details">
+                        <div class="order-item-name">Clavier Mécanique RGB</div>
+                        <div class="order-item-quantity">Quantité: 1</div>
+                    </div>
+                    <div class="order-item-price">75 000 FCFA</div>
+                </div>
+            </div>
+            
+            <div class="order-totals">
+                <div class="order-total-row">
+                    <span class="order-total-label">Sous-total</span>
+                    <span class="order-total-value">2 024 000 FCFA</span>
+                </div>
+                
+                <div class="order-total-row">
+                    <span class="order-total-label">Livraison</span>
+                    <span class="order-total-value">Gratuite</span>
+                </div>
+                
+                <div class="order-total-row" style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #eee;">
+                    <span class="order-total-label">Remise</span>
+                    <span class="order-total-value" style="color: var(--success-color);">- 24 000 FCFA</span>
+                </div>
+                
+                <div class="order-total-row order-grand-total">
+                    <span>Total</span>
+                    <span>2 000 000 FCFA</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 4px;">
+                <p style="font-size: 14px; margin-bottom: 10px;">
+                    <i class="fas fa-lock" style="color: var(--primary-color); margin-right: 5px;"></i>
+                    Paiement sécurisé
+                </p>
+                <p style="font-size: 12px; color: #666; margin-bottom: 0;">
+                    Vos informations de paiement sont cryptées et sécurisées. Nous ne stockons jamais les détails de votre carte.
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>À propos de nous</h3>
+                    <p>PC Home est votre destination de confiance pour tous vos besoins en informatique et nouvelles technologies.</p>
+                    <div class="social-links" style="margin-top: 15px;">
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Nouveautés</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Ordinateurs portables</a></li>
+                        <li><a href="#">Ordinateurs de bureau</a></li>
+                        <li><a href="#">Composants PC</a></li>
+                        <li><a href="#">Périphériques</a></li>
+                        <li><a href="#">Accessoires</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contactez-nous</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue de l'Informatique, Lomé, Togo</li>
+                        <li><i class="fas fa-phone"></i> +228 90 74 35 73</li>
+                        <li><i class="fas fa-envelope"></i> contact@pchome.tg</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PC Home. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion des méthodes de paiement
+        const paymentMethods = document.querySelectorAll('.payment-method');
+        const cardDetails = document.getElementById('cardDetails');
+        const orangeMoneyDetails = document.getElementById('orangeMoneyDetails');
+        const moovMoneyDetails = document.getElementById('moovMoneyDetails');
+        const cashDetails = document.getElementById('cashDetails');
+        const paymentForm = document.getElementById('paymentForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const loading = document.querySelector('.loading');
+        
+        // Gestion du changement de méthode de paiement
+        paymentMethods.forEach(method => {
+            method.addEventListener('click', function() {
+                // Retirer la classe active de toutes les méthodes
+                paymentMethods.forEach(m => m.classList.remove('active'));
+                
+                // Ajouter la classe active à la méthode sélectionnée
+                this.classList.add('active');
+                
+                // Masquer tous les détails de paiement
+                cardDetails.style.display = 'none';
+                orangeMoneyDetails.style.display = 'none';
+                moovMoneyDetails.style.display = 'none';
+                cashDetails.style.display = 'none';
+                
+                // Afficher les détails de la méthode sélectionnée
+                const paymentType = this.getAttribute('data-payment');
+                if (paymentType === 'card') {
+                    cardDetails.style.display = 'block';
+                } else if (paymentType === 'orangemoney') {
+                    orangeMoneyDetails.style.display = 'block';
+                } else if (paymentType === 'moovmoney') {
+                    moovMoneyDetails.style.display = 'block';
+                } else if (paymentType === 'cash') {
+                    cashDetails.style.display = 'block';
+                }
+            });
+        });
+        
+        // Formatage du numéro de carte
+        const cardNumber = document.getElementById('cardNumber');
+        if (cardNumber) {
+            cardNumber.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\s+/g, '');
+                if (value.length > 0) {
+                    value = value.match(new RegExp('.{1,4}', 'g')).join(' ');
+                }
+                e.target.value = value;
+                
+                // Détection du type de carte
+                const cardIcons = document.querySelectorAll('.card-icon');
+                let cardType = '';
+                
+                if (/^4/.test(value)) {
+                    cardType = 'visa';
+                } else if (/^5[1-5]/.test(value)) {
+                    cardType = 'mastercard';
+                } else if (/^3[47]/.test(value)) {
+                    cardType = 'amex';
+                } else if (/^6(?:011|5)/.test(value)) {
+                    cardType = 'discover';
+                }
+                
+                cardIcons.forEach(icon => {
+                    if (icon.getAttribute('data-type') === cardType) {
+                        icon.classList.add('active');
+                    } else {
+                        icon.classList.remove('active');
+                    }
+                });
+            });
+        }
+        
+        // Formatage de la date d'expiration
+        const expiryDate = document.getElementById('expiryDate');
+        if (expiryDate) {
+            expiryDate.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 2) {
+                    value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                }
+                e.target.value = value;
+            });
+        }
+        
+        // Formatage du CVV
+        const cvv = document.getElementById('cvv');
+        if (cvv) {
+            cvv.addEventListener('input', function(e) {
+                e.target.value = e.target.value.replace(/\D/g, '').substring(0, 4);
+            });
+        }
+        
+        // Formatage des numéros de téléphone
+        const phoneInputs = document.querySelectorAll('input[type="tel"]');
+        phoneInputs.forEach(input => {
+            input.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    value = value.match(new RegExp('.{1,2}', 'g')).join(' ');
+                }
+                e.target.value = value;
+            });
+        });
+        
+        // Soumission du formulaire
+        if (paymentForm) {
+            paymentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Afficher l'animation de chargement
+                submitBtn.style.display = 'none';
+                loading.style.display = 'block';
+                
+                // Simuler un traitement de paiement
+                setTimeout(() => {
+                    // Ici, vous ajouteriez la logique de traitement du paiement
+                    // Pour cet exemple, nous allons simuler un paiement réussi après 2 secondes
+                    window.location.href = '../Confirmation/confirmation.html';
+                }, 2000);
+            });
+        }
+        
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Afficher les détails de la carte par défaut
+            cardDetails.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

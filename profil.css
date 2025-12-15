@@ -5,4 +5,11 @@ text-decoration: double;
 button{
      background-color: rgb(0, 0, 0);
 }
-   
+
+/* Style pour les petits textes en gras */
+.specs p, .price, .product-badge, .add-to-cart,
+.product-specs li, .product-price, .cart-item-details,
+.checkout-summary p, .order-details p, .account-info p,
+.filter-options select, .filter-options option {
+    font-weight: bold !important;
+}

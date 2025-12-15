@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessoires - FuturTech</title>
+    <link rel="stylesheet" href="fichier/css/portable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../js/cart.js" defer></script>
+    <span class="cart-counter" id="cart-counter"></span>
+</head>
+<body>
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Accessoires</h1>
+            <nav style="display: flex; gap: 15px; align-items: center;">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <i class="fas fa-moon"></i>
+                    <span>Mode Nuit</span>
+                </button>
+                <a href="../accueil.html" class="btn" style="background-color: #2563eb; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center;">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Retour à l'accueil
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters">
+            <h2>Filtrer par :</h2>
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="clavier">Claviers</option>
+                    <option value="souris">Souris</option>
+                    <option value="casque">Casques</option>
+                    <option value="ecran">Écrans</option>
+                    <option value="stockage">Stockage</option>
+                </select>
+                <select id="price-filter">
+                    <option value="all">Tous les prix</option>
+                    <option value="0-50">Moins de 50€</option>
+                    <option value="50-100">50€ - 100€</option>
+                    <option value="100-200">100€ - 200€</option>
+                    <option value="200">Plus de 200€</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <!-- Les accessoires seront ajoutés ici dynamiquement ou manuellement -->
+        </section>
+    </main>
+
+    <div class="cart-notification" id="cartNotification">
+        <span id="notificationText"></span>
+    </div>
+</body>
+</html>

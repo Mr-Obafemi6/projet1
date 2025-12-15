@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Gamer - FuturTech</title>
+    <link rel="stylesheet" href="fichier/css/portable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../js/cart.js" defer></script>
+    <span class="cart-counter" id="cart-counter"></span>
+</head>
+<body>
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>PC Gamer</h1>
+            <nav style="display: flex; gap: 15px; align-items: center;">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <i class="fas fa-moon"></i>
+                    <span>Mode Nuit</span>
+                </button>
+                <a href="../accueil.html" class="btn" style="background-color: #2563eb; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center;">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Retour à l'accueil
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters">
+            <h2>Filtrer par :</h2>
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="entree">Entrée de gamme</option>
+                    <option value="moyen">Milieu de gamme</option>
+                    <option value="haut">Haut de gamme</option>
+                </select>
+                <select id="price-filter">
+                    <option value="all">Tous les prix</option>
+                    <option value="0-1000">Moins de 1000€</option>
+                    <option value="1000-2000">1000€ - 2000€</option>
+                    <option value="2000">Plus de 2000€</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <!-- Les produits seront ajoutés ici dynamiquement ou manuellement -->
+        </section>
+    </main>
+
+    <div class="cart-notification" id="cartNotification">
+        <span id="notificationText"></span>
+    </div>
+</body>
+</html>

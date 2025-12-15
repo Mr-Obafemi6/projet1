@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des stocks - PCHome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stock.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +228 90 74 35 73 / 99 44 98 58</span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:gerardtchalla6@gmail.com">gerardtchalla6@gmail.com</a></span>
+                </div>
+                <div class="auth-links">
+                    <a href="../Compte/mon-compte.html"><i class="fas fa-user"></i> Mon Compte</a>
+                    <a href="../Panier/panier.html"><i class="fas fa-shopping-cart"></i> Panier <span class="cart-count">0</span></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="../accueil.html">PC<span>Home</span></a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../accueil.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Ordinateurs <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="../PC/PCportable.html">PC Portable</a>
+                            <a href="../PC/Bureautique.html">PC Bureau</a>
+                            <a href="../PC/Gamer.html">PC Gamer</a>
+                            <a href="../PC/Accesoires.html">Accessoires</a>
+                        </div>
+                    </li>
+                    <li><a href="../Composants.html">Composants</a></li>
+                    <li><a href="../périferique.html">Périphériques</a></li>
+                    <li><a href="../promotion.html">Promotions</a></li>
+                    <li><a href="../Contact/contact.html">Contact</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Bannière de la page de stock -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Gestion des stocks</h1>
+            <p>Visualisez et gérez les niveaux de stock de vos produits</p>
+        </div>
+    </section>
+
+    <!-- Section principale -->
+    <main class="stock-container">
+        <div class="container">
+            <!-- Barre d'outils -->
+            <div class="toolbar">
+                <div class="search-filter">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Rechercher un produit...">
+                    </div>
+                    <select id="categoryFilter">
+                        <option value="all">Toutes les catégories</option>
+                        <option value="pc-portable">PC Portable</option>
+                        <option value="pc-bureau">PC Bureau</option>
+                        <option value="pc-gamer">PC Gamer</option>
+                        <option value="accessoires">Accessoires</option>
+                        <option value="composants">Composants</option>
+                        <option value="peripheriques">Périphériques</option>
+                    </select>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-primary" id="exportBtn">
+                        <i class="fas fa-file-export"></i> Exporter
+                    </button>
+                    <button class="btn btn-secondary" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i> Actualiser
+                    </button>
+                </div>
+            </div>
+
+            <!-- Onglets -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="all">Tous les produits</button>
+                <button class="tab-btn" data-tab="in-stock">En stock</button>
+                <button class="tab-btn" data-tab="low-stock">Stock faible</button>
+                <button class="tab-btn" data-tab="out-of-stock">Rupture</button>
+            </div>
+
+            <!-- Tableau des stocks -->
+            <div class="stock-table-container">
+                <table class="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Référence</th>
+                            <th>Produit</th>
+                            <th>Catégorie</th>
+                            <th>Prix d'achat</th>
+                            <th>Prix de vente</th>
+                            <th>Stock actuel</th>
+                            <th>Seuil d'alerte</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stockTableBody">
+                        <!-- Les données seront chargées dynamiquement -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn" id="prevPage"><i class="fas fa-chevron-left"></i></button>
+                <div class="page-numbers" id="pageNumbers">
+                    <!-- Les numéros de page seront générés dynamiquement -->
+                </div>
+                <button class="page-btn" id="nextPage"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal d'ajout/édition de produit -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Ajouter un produit</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <input type="hidden" id="productId">
+                    <div class="form-group">
+                        <label for="productName">Nom du produit *</label>
+                        <input type="text" id="productName" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productCategory">Catégorie *</label>
+                            <select id="productCategory" required>
+                                <option value="">Sélectionner une catégorie</option>
+                                <option value="pc-portable">PC Portable</option>
+                                <option value="pc-bureau">PC Bureau</option>
+                                <option value="pc-gamer">PC Gamer</option>
+                                <option value="accessoires">Accessoires</option>
+                                <option value="composants">Composants</option>
+                                <option value="peripheriques">Périphériques</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="productReference">Référence *</label>
+                            <input type="text" id="productReference" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="purchasePrice">Prix d'achat (FCFA) *</label>
+                            <input type="number" id="purchasePrice" min="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sellingPrice">Prix de vente (FCFA) *</label>
+                            <input type="number" id="sellingPrice" min="0" step="0.01" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="currentStock">Stock actuel *</label>
+                            <input type="number" id="currentStock" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="alertThreshold">Seuil d'alerte *</label>
+                            <input type="number" id="alertThreshold" min="1" value="5" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="productDescription">Description</label>
+                        <textarea id="productDescription" rows="3"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-col">
+                    <h3>À propos de nous</h3>
+                    <p>PC Home est votre destination unique pour tous vos besoins en informatique. Nous proposons des produits de qualité à des prix compétitifs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="../accueil.html">Accueil</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Nouveautés</a></li>
+                        <li><a href="#">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="../PC/PCportable.html">PC Portable</a></li>
+                        <li><a href="../PC/Bureautique.html">PC Bureau</a></li>
+                        <li><a href="../PC/Gamer.html">PC Gamer</a></li>
+                        <li><a href="../PC/Accesoires.html">Accessoires</a></li>
+                        <li><a href="#">Composants</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Abonnez-vous à notre newsletter pour recevoir les dernières actualités et offres spéciales.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre adresse email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 PCHome. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="stock.js"></script>
+</body>
+</html>

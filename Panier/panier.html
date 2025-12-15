@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - PCHome</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Panier.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +228 90 74 35 73 / 99 44 98 58</span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:gerardtchalla6@gmail.com" style="color: white; text-decoration: none;">gerardtchalla6@gmail.com</a></span>
+                </div>
+                <div class="auth-links">
+                    <a href="../Compte/mon-compte.html"><i class="fas fa-user"></i> Mon Compte</a>
+                    <a href="panier.html" class="active"><i class="fas fa-shopping-cart"></i> Panier (3)</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="../accueil.html">PC<span>Home</span></a>
+                </div>
+                <div class="nav-links">
+                    <a href="../accueil.html"><i class="fas fa-home"></i> Accueil</a>
+                    <a href="#">Ordinateurs <i class="fas fa-chevron-down"></i></a>
+                    <a href="#">Composants <i class="fas fa-chevron-down"></i></a>
+                    <a href="#">Périphériques</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="search-cart">
+                    <div class="search-box">
+                        <input type="text" placeholder="Rechercher...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="cart-container">
+        <div class="container">
+            <h1 class="page-title">Votre panier</h1>
+            
+            <div class="cart-wrapper">
+                <div class="cart-items">
+                    <!-- Panier vide -->
+                    <!-- <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Votre panier est vide</h3>
+                        <p>Parcourez nos catégories pour découvrir nos produits</p>
+                        <a href="interface.html" class="checkout-btn">Continuer vos achats</a>
+                    </div> -->
+                    
+                    <!-- Articles du panier -->
+                    <div class="cart-item">
+                        <img src="https://via.placeholder.com/100" alt="Produit" class="product-image">
+                        <div class="product-details">
+                            <h3>PC Gamer Pro</h3>
+                            <p>Référence: PCG-2023-001</p>
+                        </div>
+                        <div class="product-price">1 499 000 FCFA</div>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="remove-item"><i class="fas fa-times"></i></button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <img src="https://via.placeholder.com/100" alt="Produit" class="product-image">
+                        <div class="product-details">
+                            <h3>Écran 27" 4K</h3>
+                            <p>Référence: ECR-2023-045</p>
+                        </div>
+                        <div class="product-price">450 000 FCFA</div>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="remove-item"><i class="fas fa-times"></i></button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <img src="https://via.placeholder.com/100" alt="Produit" class="product-image">
+                        <div class="product-details">
+                            <h3>Clavier Mécanique RGB</h3>
+                            <p>Référence: CLA-2023-112</p>
+                        </div>
+                        <div class="product-price">75 000 FCFA</div>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="remove-item"><i class="fas fa-times"></i></button>
+                    </div>
+                    
+                    <div class="cart-actions" style="margin-top: 30px; display: flex; justify-content: space-between;">
+                        <a href="../interface.html" class="secondary-btn"><i class="fas fa-arrow-left"></i> Continuer mes achats</a>
+                        <button class="secondary-btn" id="update-cart"><i class="fas fa-sync-alt"></i> Mettre à jour le panier</button>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h2 class="summary-title">Résumé de la commande</h2>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Sous-total</span>
+                        <span class="summary-value">2 024 000 FCFA</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Livraison</span>
+                        <span class="summary-value">À calculer</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Remise</span>
+                        <span class="summary-value">- 24 000 FCFA</span>
+                    </div>
+                    
+                    <div class="summary-total summary-row">
+                        <span>Total</span>
+                        <span>2 000 000 FCFA</span>
+                    </div>
+                    
+                    <a href="../Checkout/checkout.html" class="checkout-btn">Procéder au paiement</a>
+                    <a href="#" class="secondary-btn">Payer avec Orange Money</a>
+                    <a href="#" class="secondary-btn" style="margin-top: 10px;">Payer avec Moov Money</a>
+                    
+                    <div class="secure-payment" style="margin-top: 20px; text-align: center; font-size: 14px; color: #666;">
+                        <i class="fas fa-lock"></i> Paiement sécurisé
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>À propos de nous</h3>
+                    <p>PC Home est votre destination de confiance pour tous vos besoins en informatique et nouvelles technologies.</p>
+                    <div class="social-links" style="margin-top: 15px;">
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Nouveautés</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Ordinateurs portables</a></li>
+                        <li><a href="#">Ordinateurs de bureau</a></li>
+                        <li><a href="#">Composants PC</a></li>
+                        <li><a href="#">Périphériques</a></li>
+                        <li><a href="#">Accessoires</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contactez-nous</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue de l'Informatique, Lomé, Togo</li>
+                        <li><i class="fas fa-phone"></i> +228 90 74 35 73</li>
+                        <li><i class="fas fa-envelope"></i> contact@pchome.tg</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PC Home. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../js/cart.js"></script></body>
+</html>

@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="actu.css">
+    <link rel="stylesheet" href="accueil.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -12,99 +15,128 @@
         <div class="top-bar">
             <div class="container">
                 <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> +228 90 74 35 73 / 99 44 98 58</span>
-                    <span><i class="fas fa-envelope"></i></span>
+                    <span><i class="fas fa-phone">Telephone</i><u> <b>+228 90 74 35 73 / 99 44 98 58</b></u></span>
+                <b> <span><i class="fas fa-envelope">Messagerie</i><a href="mailto:gerardtchalla6@gmail.com"><b>gerardtchalla6@gmail.com</b></a></span></b>
                 </div>
                 <div class="auth-links">
-                    <a href="#"><i class="fas fa-user"></i><h2>Mon Compte</h></a>
-                    <a href="#"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+                    <button class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <i class="fas fa-moon"></i>
+                    <span>Mode Sombre</span>
+                </button>
+                    <a href="../Dossiers (HTML-CSS)/Compte/mon-compte.html" class="account-link">
+                        <i class="fas fa-user"></i><b>Mon Compte </b>
+                    </a>
+                    <a href="Panier/panier.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i><b> Panier (<span class="cart-count">0</span>)</b>
+                    </a>
                 </div>
             </div>
         </div>
-
         <nav class="main-nav">
             <div class="container">
                 <div class="logo">
-                    <a href="interface.html">PC<span>Home</span></a>
+                    <a href="interface.html"><b>PC<span>Home</span></a></b>
                 </div>
                 <div class="menu-toggle" id="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span> <h2>Menu</h2></span>
                 </div>
                 <ul class="nav-links">
-                    <a href="exercice.html" class="active"><i class="fas fa-home"></i> Accueil</a>
+                    <a href="interface.html" class="active"><i class="fas fa-home"></i><b> Accueil</b></a>
                     <li class="dropdown">
-                        <a href="#">Ordinateurs <i class="fas fa-chevron-down"></i></a>
+                        <b><a href="#"><b>Ordinateurs</b> <i class="fas fa-chevron-down"></i></a></b>
                         <div class="dropdown-content">
-                            <a href="">PC Portable</a>
-                            <a href="#">PC Bureau</a>
-                            <img src="" alt="image/iph.jpg"><a href="image/iph.jpg">PC Gamer</a>
-                            <a href="#">Workstations</a>
-                        </div>
+                            <a href="PC/PCportable.html"><b>PC Portable</b></a>
+                            <a href="PC/Bureautique.html"><b>PC Bureau</b></a>
+                            <a href="PC/Gamer.html"> <b>PC Gamer</b></a>
+                            <a href="PC/Accesoires.html"><b>Accesoires</b></a>
+                        </div></b>
                     </li>
-                    <li><a href="#">Composants</a></li>
-                    <li><a href="#">Périphériques</a></li>
-                    <li><a href="#">Promotions</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="Composants.html"><b>Composants</b></a></li>
+                    <li><a href="#"> <b>Nouveautés</b> </a></li>
+                    <li><a href="périferique.html"><b>Périphériques</b></a></li>
+                    <li><a href="promotion.html"><b>Promotions</b></a></li>
+                    <li><a href="Contact/contact.html"><b>Contact</b></a></li>
                 </ul>
                 <div class="search-box">
-                    <input type="text" placeholder="Rechercher un produit...">
+                    <b><input type="text" placeholder="Rechercher un produit..."></b>
                     <button><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </nav>
     </header>
 
-
     <!-- Bannière principale -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Les meilleurs ordinateurs au meilleur prix</h1>
-                <p>Découvrez notre sélection de PC gamer, ordinateurs portables et accessoires</p>
-                <a href="#featured" class="btn">Découvrir</a>
+                <h1>Bienvenue à PCHome </h1>
+                <h2>Les meilleurs ordinateurs au meilleur prix</h2>
+                <p><b>Découvrez notre sélection de PC, ordinateurs portables et accessoires...</b></p>
+                <a href="Futureds/Découvrir.html" class="btn">Découvrir</a>
             </div>
         </div>
     </section>
 
+
     <!-- Catégories -->
     <section class="categories" id="categories">
         <div class="container">
-            <h2 class="section-title">Nos Catégories</h2>
+            <h2 class="section-title"><b>Nos Catégories</b></h2>
             <div class="category-grid">
                 <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200" alt="PC Portable">
+                    <img src="image/84638eea-4204-414b-bf3a-b5a87938842a.jpeg" alt="PC Portable">
                     <h3>PC Portable</h3>
-                    <a href="#" class="btn-small">Voir plus</a>
+                <button><a href="PC/PCportable.html" class="btn-small"><b><h2>Voir plus</h2></b></a></button> 
                 </div>
                 <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200" alt="PC Bureau">
-                    <h3>PC Bureau</h3>
-                    <a href="#" class="btn-small">Voir plus</a>
+                    <img src="image/pc burr.jpg" alt="PC Bureau">
+                    <h3>PC Bureautique</h3>
+                    <button><a href="PC/Bureautique.html" class="btn-small"><b><h2>Voir plus</h2></b></a></button>
                 </div>
                 <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200" alt="PC Gamer">
+                    <img src="image/pc gamer.jpg" alt="PC Gamer">
                     <h3>PC Gamer</h3>
-                    <a href="#" class="btn-small">Voir plus</a>
+                    <a href="PC/Gamer.html" class="btn-small">Voir plus</a>
                 </div>
                 <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Accessoires">
+                    <img src="image/gammmmer.jpg" alt="PC Gamer">
+                    <h3>PC Gamer</h3>
+                    <a href="PC/Gamer.html" class="btn-small">Voir plus</a>
+                </div>
+                <div class="category-card">
+                    <img src="image/gamer.jpg" alt="PC Gamer">
+                    <h3>PC Gamer</h3>
+                    <a href="PC/Gamer.html" class="btn-small">Voir plus</a>
+                </div>
+                <div class="category-card">
+                    <img src="image/USBS.jpg" alt="Clés USB">
+                    <h3>Clés USB</h3>
+                    <a href="Accessoires/cles-usb.html" class="btn-small">Voir plus</a>
+                </div>
+                <div class="category-card">
+                    <img src="image/sri.jpg" alt="Souris">
+                    <h3>Souris</h3>
+                    <a href="Accessoires/souris.html" class="btn-small">Voir plus</a>
+                </div>
+                <div class="category-card">
+                    <img src="image/grrr.jpg" alt="Accessoires">
                     <h3>Accessoires</h3>
-                    <a href="#" class="btn-small">Voir plus</a>
+                    <a href="PC/Accesoires.html" class="btn-small">Voir plus</a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Produits en vedette -->
     <section class="featured-products" id="featured">
         <div class="container">
             <h2 class="section-title">Produits en Vedette</h2>
             <div class="product-grid">
+                <!-- Produit 1 -->
                 <div class="product-card">
-                    <div class="product-badge">Promo</div>
-                    <img src="https://via.placeholder.com/250x200" alt="PC Gamer">
+                    <div class="product-badge">Nouveau</div>
+                    <img src="image/gamer pc.jpg" alt="PC Gamer Pro">
                     <h3>PC Gamer Pro X</h3>
                     <div class="rating">
                         <i class="fas fa-star"></i>
@@ -114,10 +146,89 @@
                         <i class="far fa-star"></i>
                         <span>(24 avis)</span>
                     </div>
-                    <div class="price">1 299,99 € <span class="old-price">1 499,99 €</span></div>
+                    <div class="price">200 0000 FCFA <span class="old-price">1 049 900 FCFA</span></div>
                     <div class="product-actions">
                         <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Ajouter</button>
-                        <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                        <button class="btn-wishlist" title="Ajouter aux favoris"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <!-- Produit 2 -->
+                <div class="product-card">
+                    <div class="product-badge">Promo</div>
+                    <img src="image/CLE USB.jpg" alt="Clé USB 128Go">
+                    <h3>Clé USB 128Go</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                        <span>(156 avis)</span>
+                    </div>
+                    <div class="price">12 500 FCFA <span class="old-price">15 000 FCFA</span></div>
+                    <div class="product-actions">
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Ajouter</button>
+                        <button class="btn-wishlist" title="Ajouter aux favoris"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+
+                <!-- Produit 3 -->
+                <div class="product-card">
+                    <div class="product-badge">Meilleure vente</div>
+                    <img src="image/souris gamming.jpg" alt="Souris Gamer">
+                    <h3>Souris Gamer RGB</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(89 avis)</span>
+                    </div>
+                    <div class="price">25 000 FCFA</div>
+                    <div class="product-actions">
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Ajouter</button>
+                        <button class="btn-wishlist" title="Ajouter aux favoris"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+
+                <!-- Produit 4 -->
+                <div class="product-card">
+                    <div class="product-badge">Nouveau</div>
+                    <img src="image/elite.jpg" alt="PC Portable Ultrabook">
+                    <h3>Ultrabook Elite</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(42 avis)</span>
+                    </div>
+                    <div class="price">1 250 000 FCFA <span class="old-price">1 350 000 FCFA</span></div>
+                    <div class="product-actions">
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Ajouter</button>
+                        <button class="btn-wishlist" title="Ajouter aux favoris"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+
+                <!-- Produit 5 -->
+                <div class="product-card">
+                    <div class="product-badge">Promo</div>
+                    <img src="image/gamming casc.jpg" alt="Casque Audio">
+                    <h3>Casque Gaming Pro</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(67 avis)</span>
+                    </div>
+                    <div class="price">45 000 FCFA <span class="old-price">55 000 FCFA</span></div>
+                    <div class="product-actions">
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Ajouter</button>
+                        <button class="btn-wishlist" title="Ajouter aux favoris"><i class="far fa-heart"></i></button>
                     </div>
                 </div>
                 <!-- Plus de produits similaires... -->
@@ -127,6 +238,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Pourquoi nous choisir -->
     <section class="features">
@@ -139,7 +251,7 @@
             <div class="feature">
                 <i class="fas fa-undo"></i>
                 <h3>Retour Facile</h3>
-                <p>30 jours pour changer d'avis</p>
+                <p>10 jours pour changer d'avis</p>
             </div>
             <div class="feature">
                 <i class="fas fa-lock"></i>
@@ -150,6 +262,11 @@
                 <i class="fas fa-headset"></i>
                 <h3>Support 24/7</h3>
                 <p>Assistance technique</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Garantie</h3>
+                <p>1 an sur tous nos produits</p>
             </div>
         </div>
     </section>
@@ -170,26 +287,66 @@
 
     <!-- Pied de page -->
     <footer>
+          <!-- Section Localisation -->
+    <section class="location-section">
+        <div class="container">
+            <h2 class="section-title">Nous Trouver</h2>
+            <div class="location-container">
+                <div class="location-info">
+                    <h3><i class="fas fa-map-marker-alt"></i> Notre Adresse</h3>
+                    <p>123 Avenue des Technologies<br>Lomé, Togo</p>
+                    
+                    <h3><i class="far fa-clock"></i> Heures d'ouverture</h3>
+                    <p>Lundi - Vendredi: 8h00 - 18h00<br>
+                    Samedi: 9h00 - 13h00<br>
+                    Dimanche: Fermé</p>
+                    
+                    <h3><i class="fas fa-phone"></i> Contact</h3>
+                    <p>Téléphone: +228 90 74 35 73<br>
+                    Email: gerardtchalla6@gmail.com</p>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.532188138181!2d1.2156158769121964!3d6.200566393798804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e3f8d2a4d3a5%3A0x5d9b464e2a9a3b0a!2sLom%C3%A9%2C%20Togo!5e0!3m2!1sfr!2stg!4v1633023224454!5m2!1sfr!2stg"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
         <div class="footer-top">
             <div class="container">
                 <div class="footer-col">
                     <h4>TechZone</h4>
                     <p>Votre partenaire high-tech pour tous vos besoins en informatique. Des produits de qualité à des prix compétitifs.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-col">
                     <h4>Liens Rapides</h4>
                     <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Produits</a></li>
-                        <li><a href="#">Promotions</a></li>
-                        <li><a href="#">Nouveautés</a></li>
-                        <li><a href="#">Contact</a></li>
+    
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -204,9 +361,9 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Technologie, 75000 Paris</li>
-                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
-                        <li><i class="fas fa-envelope"></i> contact@techzone.fr</li>
+                        <li><i class="fas fa-map-marker-alt"></i> IEPP ANNE</li>
+                        <li><i class="fas fa-phone"></i> +228-90-74-35-73/99-44-98-58</li>
+                        <li><i class="fas fa-envelope"></i> gerardtchalla6@gmail.com</li>
                     </ul>
                 </div>
             </div>
@@ -237,5 +394,8 @@
             header.classList.toggle('sticky', window.scrollY > 0);
         });
     </script>
+    <script src="script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

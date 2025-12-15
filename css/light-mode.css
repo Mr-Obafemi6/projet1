@@ -1,0 +1,36 @@
+/* Variables CSS pour le thème clair (par défaut) */
+:root {
+  /* Couleurs de base */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --text-muted: #6c757d;
+  --text-light: #f8f9fa;
+  
+  /* Éléments d'interface */
+  --header-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-color: #e0e0e0;
+  
+  /* Couleurs d'accent */
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  
+  /* États */
+  --hover-color: #f0f0f0;
+  --active-color: #e0e0e0;
+  
+  /* Liens */
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  
+  /* Boutons */
+  --btn-text: #ffffff;
+  --btn-hover-bg: #0056b3;
+  --btn-hover-text: #ffffff;
+}
